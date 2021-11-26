@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/textintro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_heading"
+        android:padding="@dimen/padding_regular"
+        android:text="@string/intro_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_regular"
+        android:id="@+id/choose_dessert"
+        android:textSize="16sp"
+        android:layout_below="@id/textintro"
+        android:text="@string/choose_a_dessert"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/donut"
+                    android:contentDescription="@string/donuts"
+                    android:src="@drawable/donut_circle"
+                    android:onClick="showDonutOrder"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_wide"
+                    android:layout_below="@id/choose_dessert"
+                    android:layout_toRightOf="@id/donut"
+                    android:textSize="18sp"
+                    android:text="@string/donuts"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/ice_cream"
+                    android:layout_below="@id/donut"
+                    android:contentDescription="@string/ice_cream_sandwiches"
+                    android:src="@drawable/icecream_circle"
+                    android:onClick="showIceCreamOrder"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_wide"
+                    android:layout_below="@id/donut"
+                    android:layout_toRightOf="@id/ice_cream"
+                    android:textSize="18sp"
+                    android:text="@string/ice_cream_sandwiches"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/froyo"
+                    android:layout_below="@id/ice_cream"
+                    android:contentDescription="@string/froyo"
+                    android:src="@drawable/froyo_circle"
+                    android:onClick="showFroyoOrder"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_wide"
+                    android:layout_below="@id/ice_cream"
+                    android:layout_toRightOf="@id/froyo"
+                    android:textSize="18sp"
+                    android:text="@string/froyo"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
